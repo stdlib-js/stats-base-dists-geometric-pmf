@@ -1,0 +1,198 @@
+<!--
+
+@license Apache-2.0
+
+Copyright (c) 2018 The Stdlib Authors.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+
+# Probability Mass Function
+
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
+
+> [Geometric][geometric-distribution] distribution [probability mass function][pmf] (PMF).
+
+<section class="intro">
+
+The [probability mass function][pmf] (PMF) for a [geometric][geometric-distribution] random variable is defined as
+
+<!-- <equation class="equation" label="eq:geometric_pmf" align="center" raw="\Pr(X = x) = \begin{cases}(1-p)^{x}\,p & \text{ for } x=0,1,2,\ldots \\ 0 & \text{ otherwise } \end{cases}" alt="Probability mass function (PMF) for a geometric distribution."> -->
+
+<div class="equation" align="center" data-raw-text="\Pr(X = x) = \begin{cases}(1-p)^{x}\,p &amp; \text{ for } x=0,1,2,\ldots \\ 0 &amp; \text{ otherwise } \end{cases}" data-equation="eq:geometric_pmf">
+    <img src="https://cdn.rawgit.com/stdlib-js/stdlib/7e0a95722efd9c771b129597380c63dc6715508b/lib/node_modules/@stdlib/stats/base/dists/geometric/pmf/docs/img/equation_geometric_pmf.svg" alt="Probability mass function (PMF) for a geometric distribution.">
+    <br>
+</div>
+
+<!-- </equation> -->
+
+where `0 <= p <= 1` is the success probability. The random variable `X` denotes the number of failures until the first success in a sequence of independent Bernoulli trials.
+
+</section>
+
+<!-- /.intro -->
+
+<section class="installation">
+
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-geometric-pmf
+```
+
+</section>
+
+<section class="usage">
+
+## Usage
+
+```javascript
+var pmf = require( '@stdlib/stats-base-dists-geometric-pmf' );
+```
+
+#### pmf( x, p )
+
+Evaluates the [probability mass function][pmf] (PMF) of a [geometric][geometric-distribution] distribution with success probability `0 <= p <= 1`.
+
+```javascript
+var y = pmf( 4.0, 0.3 );
+// returns ~0.072
+
+y = pmf( 2.0, 0.7 );
+// returns ~0.063
+
+y = pmf( -1.0, 0.5 );
+// returns 0.0
+```
+
+If provided `NaN` as any argument, the function returns `NaN`.
+
+```javascript
+var y = pmf( NaN, 0.0 );
+// returns NaN
+
+y = pmf( 0.0, NaN );
+// returns NaN
+```
+
+If provided a success probability `p` outside of the interval `[0,1]`, the function returns `NaN`.
+
+```javascript
+var y = pmf( 2.0, -1.0 );
+// returns NaN
+
+y = pmf( 2.0, 1.5 );
+// returns NaN
+```
+
+#### pmf.factory( p )
+
+Returns a function for evaluating the [probability mass function][pmf] (PMF) of a [geometric][geometric-distribution] distribution with success probability `0 <= p <= 1`.
+
+```javascript
+var mypmf = pmf.factory( 0.5 );
+var y = mypmf( 3.0 );
+// returns 0.0625
+
+y = mypmf( 1.0 );
+// returns 0.25
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var round = require( '@stdlib/math-base-special-round' );
+var pmf = require( '@stdlib/stats-base-dists-geometric-pmf' );
+
+var p;
+var x;
+var y;
+var i;
+
+for ( i = 0; i < 10; i++ ) {
+    x = round( randu() * 5.0 );
+    p = randu();
+    y = pmf( x, p );
+    console.log( 'x: %d, p: %d, P( X = x; p ): %d', x, p.toFixed( 4 ), y.toFixed( 4 ) );
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+
+<section class="main-repo" >
+
+* * *
+
+## Notice
+
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+
+For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
+
+---
+
+## License
+
+See [LICENSE][stdlib-license].
+
+
+## Copyright
+
+Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
+
+</section>
+
+<!-- /.stdlib -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="links">
+
+[npm-image]: http://img.shields.io/npm/v/@stdlib/stats-base-dists-geometric-pmf.svg
+[npm-url]: https://npmjs.org/package/@stdlib/stats-base-dists-geometric-pmf
+
+[test-image]: https://github.com/stdlib-js/stats-base-dists-geometric-pmf/actions/workflows/test.yml/badge.svg
+[test-url]: https://github.com/stdlib-js/stats-base-dists-geometric-pmf/actions/workflows/test.yml
+
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-base-dists-geometric-pmf/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/stats-base-dists-geometric-pmf?branch=main
+
+[dependencies-image]: https://img.shields.io/david/stdlib-js/stats-base-dists-geometric-pmf
+[dependencies-url]: https://david-dm.org/stdlib-js/stats-base-dists-geometric-pmf/main
+
+[stdlib]: https://github.com/stdlib-js/stdlib
+
+[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
+
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-base-dists-geometric-pmf/main/LICENSE
+
+[geometric-distribution]: https://en.wikipedia.org/wiki/Geometric_distribution
+
+[pmf]: https://en.wikipedia.org/wiki/Probability_mass_function
+
+</section>
+
+<!-- /.links -->
