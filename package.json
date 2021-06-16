@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-base-dists-geometric-pmf",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Geometric distribution probability mass function (PMF).",
   "license": "Apache-2.0",
   "author": {
