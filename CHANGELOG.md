@@ -2,6 +2,63 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2024-12-28)
+
+<section class="features">
+
+### Features
+
+-   [`ec29387`](https://github.com/stdlib-js/stdlib/commit/ec2938779234c0ae42ffd2da4038e013b0c0e62b) - add C implementation for `stats/base/dists/geometric/pmf` [(#4220)](https://github.com/stdlib-js/stdlib/pull/4220)
+
+</section>
+
+<!-- /.features -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#3639](https://github.com/stdlib-js/stdlib/issues/3639)
+
+</section>
+
+<!-- /.issues -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`ec29387`](https://github.com/stdlib-js/stdlib/commit/ec2938779234c0ae42ffd2da4038e013b0c0e62b) - **feat:** add C implementation for `stats/base/dists/geometric/pmf` [(#4220)](https://github.com/stdlib-js/stdlib/pull/4220) _(by Prashant Kumar Yadav, Philipp Burckhardt, stdlib-bot)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Philipp Burckhardt
+-   Prashant Kumar Yadav
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-28)
