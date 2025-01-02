@@ -237,7 +237,6 @@ double stdlib_base_dists_geometric_pmf( const double x, const double p );
 #include "stdlib/math/base/special/round.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
 
 static double random_uniform( const double min, const double max ) {
     double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
@@ -297,7 +296,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
