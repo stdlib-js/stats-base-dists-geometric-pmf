@@ -2,6 +2,41 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-02-24)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`45e5fab`](https://github.com/stdlib-js/stdlib/commit/45e5fabec7c1617c1aa88cc757ade2f799221a38) - **bench:** refactor to use string interpolation in `stats/base/dists/geometric` [(#10361)](https://github.com/stdlib-js/stdlib/pull/10361) _(by Vishal Gaikwad, Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 2 people contributed to this release. Thank you to the following contributors:
+
+-   Athan Reines
+-   Vishal Gaikwad
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.1">
 
 ## 0.3.1 (2026-02-08)
